@@ -21,7 +21,7 @@ dotenv.config();
 //creating server
 const app = express();
 //Giving port number to server
-const port = process.env.MYPORT;
+//const port = process.env.MYPORT;
 
 
 //defining which domain to use our server
@@ -37,10 +37,8 @@ connectDB();
 
 
 //Initialize routing
-app.use('/', userRouter)
-
-
+app.use('/', userRouter);
 //Listening to the server Port
-app.listen(port,()=>{
-    console.log(`Server is running in the port : ${port}`);
+app.listen(3000,()=>{
+    console.log("Server is running in the port");
 });
